@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css">
+	  <link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+		integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+		crossorigin="">
+		<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+		integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+		crossorigin="" defer></script>
+		<script type="application/javascript" charset="utf-8" src="js/dbhelper.js" defer></script>
+		<script type="text/javascript" src="js/register_sw.js" defer></script>
+		<script type="application/javascript" charset="utf-8" src="js/main.js" defer></script>
+	  <title>Restaurant Reviews</title>
+	</head>
+	<body>
+	  <header>
+	    <nav>
+	      <h1><a href="/">Restaurant Reviews</a></h1>
+	    </nav>
+	  </header>
+
+	  <main>
+	    <section id="map-container" role="application">
+	      <div id="map" aria-label="map"></div>
+	    </section>
+	    <section class="filter-options">
+				<div class="container">
+		      <h2>Filter Results</h2>
+		      <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+		        <option value="all">All Neighborhoods</option>
+		      </select>
+		      <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+		        <option value="all">All Cuisines</option>
+		      </select>
+				</div>
+	    </section>
+			<section id="restaurant-container">
+				<div class="container">
+					<h2>Restaurants</h2>
+		      <ul id="restaurants-list"></ul>
+				</div>
+	    </section>
+	  </main>
+	  <footer>
+	    <small>Copyright &copy;2017 <a href="/">Restaurant Reviews</a> All Rights Reserved.</small>
+	  </footer>
+	</body>
+</html>

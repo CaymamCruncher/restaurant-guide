@@ -1,0 +1,222 @@
+/* CSS Document */
+* {
+  box-sizing: border-box;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  text-decoration: none;
+  list-style-type: none; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333; }
+
+main {
+  margin: 0; }
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem .5rem; }
+
+a {
+  color: #e7950c; }
+
+a:hover, a:focus {
+  color: #3397db;
+  text-decoration: none; }
+
+footer {
+  background-color: #444;
+  color: #aaa;
+  padding: 2rem;
+  text-align: center;
+  text-transform: uppercase; }
+
+/* ====================== Navigation ====================== */
+header {
+  background-color: #252831;
+  text-align: center; }
+
+h1 {
+  background-color: #252831;
+  padding: 2rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 200; }
+  h1 a {
+    color: #fff; }
+
+/* ====================== Map ====================== */
+#map {
+  margin: 0;
+  height: 400px;
+  width: 100%;
+  background-color: #ccc; }
+
+/* ====================== Restaurant Filtering ====================== */
+.filter-options {
+  background-color: #3397db; }
+  .filter-options h2 {
+    color: white;
+    margin: .5rem;
+    font-weight: normal; }
+  .filter-options select {
+    background-color: #fff;
+    border: 1px solid #fff;
+    font-family: Arial,sans-serif;
+    font-size: 1rem;
+    margin: .5rem;
+    padding: .5rem; }
+
+/* ====================== Restaurant Listing ====================== */
+#restaurant-container {
+  background-color: #f3f3f3; }
+  #restaurant-container h2 {
+    font-size: 2rem;
+    margin: 1rem .5rem;
+    text-align: left; }
+
+#restaurants-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  #restaurants-list li {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    font-family: Arial,sans-serif;
+    margin: 1rem .5rem;
+    max-width: 300px;
+    min-height: 380px;
+    padding: 1rem;
+    text-align: left; }
+  #restaurants-list h3 {
+    color: #f18200;
+    font-weight: 200;
+    line-height: 1.3;
+    margin: 20px 0 10px;
+    text-transform: uppercase; }
+  #restaurants-list img {
+    display: block;
+    width: 100%;
+    min-height: 248px; }
+  #restaurants-list p {
+    margin: 0;
+    font-size: 11pt; }
+  #restaurants-list a {
+    background-color: orange;
+    border-bottom: 3px solid #eee;
+    color: #fff;
+    display: inline-block;
+    font-size: 10pt;
+    margin: 15px 0 0;
+    padding: .5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase; }
+
+/* ====================== Restaurant Details ====================== */
+.inside header {
+  position: sticky;
+  top: 0;
+  z-index: 1001; }
+
+.inside nav {
+  padding: 1rem;
+  text-align: left;
+  background-color: #eee;
+  margin: 0;
+  width: 100%; }
+  .inside nav a:hover {
+    color: #01447e; }
+  .inside nav a:before {
+    padding: .5rem;
+    color: #000;
+    content: "/\00a0"; }
+
+#restaurant-name {
+  color: #f18200;
+  font-family: Arial,sans-serif;
+  font-size: 1.6rem;
+  font-weight: 200;
+  margin: 1rem 0;
+  text-transform: uppercase;
+  line-height: 1.1; }
+
+#restaurant-img {
+  margin: 1rem 0;
+  padding: 0 .5rem;
+  width: 100%; }
+
+#restaurant-address {
+  font-size: 1.1rem;
+  margin: .5rem; }
+
+#restaurant-cuisine {
+  font-weight: 300;
+  margin: .5rem; }
+
+#restaurant-hours {
+  margin: .5rem 0; }
+  #restaurant-hours tr {
+    display: block;
+    margin: 0 .5rem; }
+  #restaurant-hours td {
+    color: #666;
+    margin: .5rem 0;
+    display: block;
+    text-align: left; }
+
+#restaurant-container, #reviews-container {
+  border-bottom: 1px solid #d9d9d9;
+  width: 100%; }
+
+#reviews-container {
+  margin: 0px auto;
+  text-align: center; }
+  #reviews-container h2 {
+    color: #f58500;
+    font-size: 1.6rem;
+    font-weight: 300;
+    letter-spacing: -1px;
+    padding-bottom: 1pt; }
+
+#reviews-list li {
+  background-color: #d9d9d9;
+  text-align: left;
+  list-style-type: none;
+  margin: 1rem .5rem;
+  padding: 2rem; }
+
+#reviews-list h3 {
+  margin: .5rem 0; }
+
+#reviews-list small {
+  margin-right: .5rem; }
+
+#reviews-list p {
+  margin: .5rem 0; }
+
+@media (min-width: 500px) {
+  #restaurant-hours {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    #restaurant-hours tr {
+      flex: 1 0 calc(100%/2 - 1rem);
+      min-width: 320px;
+      justify-content: space-between;
+      display: flex; }
+      #restaurant-hours tr td:last-child {
+        text-align: right; }
+    #restaurant-hours td {
+      width: 100%; }
+  #reviews-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    #reviews-list li {
+      min-width: 350px;
+      flex: 1 0 calc(100%/2 - 1rem); } }
